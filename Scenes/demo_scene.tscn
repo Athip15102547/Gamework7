@@ -142,6 +142,7 @@ text = "X 3"
 label_settings = SubResource("LabelSettings_igq7x")
 
 [node name="CoinsLabel2" type="Label" parent="UserInterface/GameUI"]
+layout_mode = 0
 offset_left = 313.0
 offset_top = 32.0
 offset_right = 945.0
