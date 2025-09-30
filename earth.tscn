@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://wy21wryp0hfs"]
+
+[ext_resource type="PackedScene" uid="uid://celjjblpqxovq" path="res://Earth.glb" id="1_om26h"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qbwya"]
+radius = 0.368366
+
+[node name="LANDflip" type="Node3D"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Earth" parent="." instance=ExtResource("1_om26h")]
+transform = Transform3D(-0.001, -1.50996e-10, 0, 1.50996e-10, -0.001, 0, 0, 0, 0.001, 0.076905, 0.0207063, -0.0492128)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Earth"]
+transform = Transform3D(-1000, 0.000150996, 0, -0.000150996, -1000, 0, 0, 0, 1000, 25.907, 20.7064, 189.033)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Earth/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999554, -0.0298756, 0, 0.0298756, 0.999554, -4.09782e-08, -0.340746, -0.191753)
+shape = SubResource("SphereShape3D_qbwya")

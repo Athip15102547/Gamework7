@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkcf2qg8bf543"]
+
+[ext_resource type="PackedScene" uid="uid://bqr5m3h4ynt6k" path="res://Grass Platform.glb" id="1_dwsah"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mgpfe"]
+height = 0.0605801
+radius = 0.287109
+
+[node name="LAND" type="Node3D"]
+
+[node name="Grass Platform" parent="." instance=ExtResource("1_dwsah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050998, 0, 0.13982)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass Platform"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass Platform/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999554, -0.0298756, 0, 0.0298756, 0.999554, 0, 0.193377, 0.00577983)
+shape = SubResource("CylinderShape3D_mgpfe")
